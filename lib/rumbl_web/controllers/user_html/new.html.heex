@@ -1,0 +1,21 @@
+<RumblWeb.Layouts.app flash={@flash}>
+  <h1>New user</h1>
+
+  <%= if @changeset.action do %>
+    <div class="alert alert-error">
+      <p>Oops, something went wrong! Please check the errors below.</p>
+    </div>
+  <% end %>
+
+  <div class="card bg-base-100 w-96 shadow-sm p-4">
+    <.form
+      :let={form}
+      for={@changeset}
+      action={~p"/users"}
+    >
+      <.input field={form[:name]} placeholder="Your name here" label="Name" />
+      <.input field={form[:username]} placeholder="Your username here" label="Username" />
+      <input type="Submit" value="Create user" class="btn btn-primary" />
+    </.form>
+  </div>
+</RumblWeb.Layouts.app>

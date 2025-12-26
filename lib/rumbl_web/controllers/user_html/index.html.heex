@@ -2,7 +2,7 @@
   <h1>Listing users</h1>
   <.list>
     <:item :for={user <- @users} title={first_name(user) <> " (#{user.id})"}>
-      <.link class="link" navigate={~p"/users/#{user.id}"}>View</.link>
+      <.link class="btn btn-link" navigate={~p"/users/#{user.id}"}>View</.link>
     </:item>
   </.list>
 </RumblWeb.Layouts.app>
