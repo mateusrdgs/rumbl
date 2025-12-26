@@ -103,3 +103,7 @@
 [data-phx-session], [data-phx-teleported-src] { display: contents }
 
 /* This file is for your main application CSS */
+
+:root {
+  --content-height: calc(100vh - (((var(--spacing) * 20) * 2) + 64px));
+}
