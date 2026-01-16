@@ -35,3 +35,5 @@ rumbl-*.tar
 npm-debug.log
 /assets/node_modules/
 
+# Elixir language server file
+.elixir_ls
